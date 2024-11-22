@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarTarea">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="1dp"
+        android:text="EDITAR TAREA"
+        android:textSize="@dimen/ver_size_lbl"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtEditarNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:hint="NOMBRE"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/txtEditarFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:hint="FECHA(DD/MM/YYYY)"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditarNombre" />
+
+    <EditText
+        android:id="@+id/txtEditarHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:hint="HORA(HH:MM)"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditarFecha" />
+
+    <EditText
+        android:id="@+id/txtEditarDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="DESCRIPCION"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditarHora" />
+
+    <RadioGroup
+        android:id="@+id/rgCategoria1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditarDescripcion">
+
+        <RadioButton
+            android:id="@+id/rbFamilia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FAMILIA" />
+
+        <RadioButton
+            android:id="@+id/rbAmigos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AMIGOS" />
+
+        <RadioButton
+            android:id="@+id/rbOcio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OCIO" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgCategoria2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toEndOf="@+id/rgCategoria1"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditarDescripcion">
+
+        <RadioButton
+            android:id="@+id/rbDeporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DEPORTE" />
+
+        <RadioButton
+            android:id="@+id/rbEstudios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ESTUDIOS" />
+
+        <RadioButton
+            android:id="@+id/rbTrabajo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TRABAJO" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnEditarEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="EDITAR"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/rgCategoria2"
+        tools:layout_editor_absoluteX="221dp" />
+
+    <Button
+        android:id="@+id/btnEditarVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="88dp"
+        android:text="VOLVER"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgCategoria1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnhadirTarea">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="1dp"
+        android:text="AÑADIR TAREA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNuevaNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/txtNuevaFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNuevaNombre" />
+
+    <EditText
+        android:id="@+id/txtNuevaHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNuevaFecha" />
+
+    <EditText
+        android:id="@+id/txtNuevaDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNuevaHora" />
+
+    <RadioGroup
+        android:id="@+id/rgNuevaCategoria1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNuevaDescripcion">
+
+        <RadioButton
+            android:id="@+id/rbNuevaFamilia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FAMILIA" />
+
+        <RadioButton
+            android:id="@+id/rbNuevaAmigos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AMIGOS" />
+
+        <RadioButton
+            android:id="@+id/rbNuevaOcio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OCIO" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgNuevaCategoria2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/rgNuevaCategoria1"
+        app:layout_constraintTop_toBottomOf="@+id/txtNuevaDescripcion">
+
+        <RadioButton
+            android:id="@+id/rbNuevaDeporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DEPORTE" />
+
+        <RadioButton
+            android:id="@+id/rbNuevaEstudios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ESTUDIOS" />
+
+        <RadioButton
+            android:id="@+id/rbNuevaTrabajo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TRABAJO" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAnhadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="1dp"
+        android:text="AÑADIR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgNuevaCategoria1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
